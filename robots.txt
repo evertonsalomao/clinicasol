@@ -1,0 +1,32 @@
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://clinicasol.com.br/sitemap.xml
+
+# Specific rules for search engines
+User-agent: Googlebot
+Allow: /
+Crawl-delay: 1
+
+User-agent: Bingbot
+Allow: /
+Crawl-delay: 1
+
+# Block access to admin areas (if any)
+Disallow: /admin/
+Disallow: /private/
+Disallow: /*.log$
+
+# Allow access to CSS and JS files
+Allow: /assets/css/
+Allow: /assets/js/
+Allow: /assets/images/
+
+# Block sensitive files
+Disallow: *.pdf$
+Disallow: /temp/
+Disallow: /backup/
+
+# Clean URLs
+Allow: /*?utm_*
