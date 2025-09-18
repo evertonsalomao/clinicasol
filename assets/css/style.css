@@ -1,5 +1,8 @@
 /* Custom CSS for Clínica Geriátrica Sol */
 
+/* Import Google Fonts - Playfair Display for elegant titles */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800&family=Crimson+Text:ital,wght@0,400;0,600;1,400&display=swap');
+
 /* Color Variables */
 :root {
   --primary-color: #2585c7;
@@ -27,7 +30,7 @@ html {
 }
 
 body {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-family: 'Crimson Text', Georgia, serif;
   line-height: 1.6;
   color: var(--text-dark);
   overflow-x: hidden;
@@ -35,29 +38,35 @@ body {
 
 /* Typography */
 h1, h2, h3, h4, h5, h6 {
-  font-weight: 700;
+  font-family: 'Playfair Display', Georgia, serif;
+  font-weight: 600;
   line-height: 1.2;
   margin-bottom: 1rem;
+  letter-spacing: -0.5px;
 }
 
 h1 {
   font-size: 2.5rem;
   line-height: 1.1;
+  font-weight: 700;
 }
 
 h2 {
   font-size: 2.2rem;
   color: var(--primary-color);
+  font-weight: 600;
 }
 
 h3 {
   font-size: 1.8rem;
   color: var(--text-dark);
+  font-weight: 500;
 }
 
 p {
   line-height: 1.7;
   margin-bottom: 1rem;
+  font-size: 1.05rem;
 }
 
 /* Navigation */
@@ -76,7 +85,8 @@ p {
 }
 
 .navbar-nav .nav-link {
-  font-weight: 500;
+  font-family: 'Playfair Display', Georgia, serif;
+  font-weight: 400;
   color: var(--text-dark) !important;
   margin: 0 0.5rem;
   padding: 0.5rem 1rem !important;
@@ -136,18 +146,21 @@ p {
 
 .hero-title {
   font-size: 3.5rem;
-  font-weight: 800;
+  font-family: 'Playfair Display', Georgia, serif;
+  font-weight: 700;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
   margin-bottom: 1.5rem;
   animation: fadeInUp 1s ease-out;
+  letter-spacing: -1px;
 }
 
 .hero-subtitle {
   font-size: 1.25rem;
-  font-weight: 300;
+  font-weight: 400;
   text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
   margin-bottom: 2rem;
   animation: fadeInUp 1s ease-out 0.3s both;
+  font-family: 'Crimson Text', Georgia, serif;
 }
 
 .hero-buttons {
@@ -156,15 +169,16 @@ p {
 
 /* Buttons */
 .btn {
-  font-weight: 600;
+  font-family: 'Playfair Display', Georgia, serif;
+  font-weight: 500;
   padding: 12px 30px;
-  border-radius: 50px;
+  border-radius: 8px;
   border: none;
   transition: all 0.3s ease;
-  text-transform: uppercase;
-  letter-spacing: 0.5px;
+  letter-spacing: 0.3px;
   position: relative;
   overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
 
 .btn::before {
@@ -214,24 +228,27 @@ section {
 
 .section-title {
   font-size: 2.5rem;
-  font-weight: 700;
+  font-family: 'Playfair Display', Georgia, serif;
+  font-weight: 600;
   color: var(--primary-color);
   margin-bottom: 1rem;
   position: relative;
+  letter-spacing: -0.5px;
 }
 
 .section-subtitle {
   font-size: 1.1rem;
   color: var(--text-muted);
   margin-bottom: 3rem;
+  font-style: italic;
 }
 
 .section-divider {
   width: 80px;
   height: 4px;
-  background: var(--gradient-secondary);
+  background: var(--primary-color);
   margin: 0 auto 3rem;
-  border-radius: 2px;
+  border-radius: 0;
 }
 
 /* Institucional Section */
@@ -239,24 +256,26 @@ section {
   color: var(--primary-color);
   font-size: 1.8rem;
   margin-bottom: 1.5rem;
+  font-family: 'Playfair Display', Georgia, serif;
 }
 
 .institucional-content p {
-  font-size: 1.1rem;
+  font-size: 1.05rem;
   line-height: 1.8;
   text-align: justify;
+  font-family: 'Crimson Text', Georgia, serif;
 }
 
 /* Recursos Cards */
 .recurso-card {
   background: var(--white);
   padding: 2.5rem;
-  border-radius: 15px;
+  border-radius: 8px;
   text-align: center;
-  box-shadow: 0 5px 25px var(--shadow);
+  box-shadow: 0 3px 15px rgba(0, 0, 0, 0.08);
+  border: 1px solid #e8e8e8;
   transition: all 0.3s ease;
   height: 100%;
-  border: 1px solid #f0f0f0;
   position: relative;
   overflow: hidden;
 }
@@ -278,14 +297,14 @@ section {
 
 .recurso-card:hover {
   transform: translateY(-10px);
-  box-shadow: 0 15px 35px rgba(37, 133, 199, 0.2);
+  box-shadow: 0 8px 25px rgba(37, 133, 199, 0.15);
 }
 
 .recurso-icon {
   width: 80px;
   height: 80px;
-  background: var(--gradient-primary);
-  border-radius: 50%;
+  background: var(--primary-color);
+  border-radius: 8px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -294,7 +313,7 @@ section {
 }
 
 .recurso-card:hover .recurso-icon {
-  background: var(--gradient-secondary);
+  background: var(--secondary-color);
   transform: scale(1.1);
 }
 
@@ -305,9 +324,10 @@ section {
 
 .recurso-card h4 {
   font-size: 1.3rem;
+  font-family: 'Playfair Display', Georgia, serif;
   color: var(--primary-color);
   margin-bottom: 1rem;
-  font-weight: 600;
+  font-weight: 500;
 }
 
 .recurso-card p {
@@ -315,21 +335,24 @@ section {
   font-size: 0.95rem;
   line-height: 1.6;
   margin: 0;
+  font-family: 'Crimson Text', Georgia, serif;
 }
 
 /* Gallery */
 .gallery-item {
   position: relative;
   overflow: hidden;
-  border-radius: 15px;
-  box-shadow: 0 5px 25px var(--shadow);
+  border-radius: 8px;
+  box-shadow: 0 3px 15px rgba(0, 0, 0, 0.1);
   transition: all 0.3s ease;
   cursor: pointer;
+  border: 2px solid #f0f0f0;
 }
 
 .gallery-item:hover {
   transform: translateY(-5px);
-  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+  border-color: var(--primary-color);
 }
 
 .gallery-img {
@@ -361,13 +384,14 @@ section {
 
 .gallery-overlay h5 {
   font-size: 1.1rem;
-  font-weight: 600;
+  font-family: 'Playfair Display', Georgia, serif;
+  font-weight: 500;
   margin: 0;
 }
 
 /* Footer */
 .footer {
-  background: linear-gradient(135deg, var(--text-dark) 0%, #1a1a1a 100%);
+  background: var(--text-dark);
   padding: 4rem 0 2rem;
 }
 
@@ -377,14 +401,16 @@ section {
 
 .footer h5 {
   color: var(--secondary-color);
+  font-family: 'Playfair Display', Georgia, serif;
   font-size: 1.3rem;
   margin-bottom: 1.5rem;
-  font-weight: 600;
+  font-weight: 500;
 }
 
 .footer p {
   color: #ccc;
   line-height: 1.7;
+  font-family: 'Crimson Text', Georgia, serif;
 }
 
 .contact-info p {
@@ -416,16 +442,16 @@ section {
 /* WhatsApp Float Button */
 .whatsapp-float {
   position: fixed;
-  width: 60px;
-  height: 60px;
+  width: 65px;
+  height: 65px;
   bottom: 30px;
   right: 30px;
   background: #25d366;
-  border-radius: 50%;
+  border-radius: 15px;
   display: flex;
   align-items: center;
   justify-content: center;
-  box-shadow: 0 4px 20px rgba(37, 211, 102, 0.4);
+  box-shadow: 0 4px 20px rgba(37, 211, 102, 0.3);
   z-index: 1000;
   animation: pulse 2s infinite;
   transition: all 0.3s ease;
@@ -433,12 +459,12 @@ section {
 
 .whatsapp-float:hover {
   transform: scale(1.1);
-  box-shadow: 0 6px 25px rgba(37, 211, 102, 0.6);
+  box-shadow: 0 6px 25px rgba(37, 211, 102, 0.5);
 }
 
 .whatsapp-float a {
   color: var(--white);
-  font-size: 1.8rem;
+  font-size: 2rem;
   text-decoration: none;
 }
 
@@ -469,7 +495,7 @@ section {
 /* Responsive Design */
 @media (max-width: 768px) {
   .hero-title {
-    font-size: 2.5rem;
+    font-size: 2.2rem;
   }
   
   .hero-subtitle {
@@ -492,14 +518,14 @@ section {
   }
   
   .whatsapp-float {
-    width: 55px;
-    height: 55px;
+    width: 60px;
+    height: 60px;
     bottom: 20px;
     right: 20px;
   }
   
   .whatsapp-float a {
-    font-size: 1.6rem;
+    font-size: 1.8rem;
   }
   
   section {
@@ -509,7 +535,7 @@ section {
 
 @media (max-width: 576px) {
   .hero-title {
-    font-size: 2rem;
+    font-size: 1.8rem;
   }
   
   .hero-subtitle {
@@ -517,7 +543,7 @@ section {
   }
   
   .section-title {
-    font-size: 1.8rem;
+    font-size: 1.6rem;
   }
   
   .btn {
@@ -531,6 +557,27 @@ section {
   
   .gallery-img {
     height: 250px;
+  }
+}
+
+/* Logo size adjustments */
+.navbar-brand img {
+  height: 55px !important;
+  transition: all 0.3s ease;
+}
+
+.footer-logo {
+  height: 65px !important;
+  filter: brightness(0) invert(1);
+}
+
+@media (max-width: 768px) {
+  .navbar-brand img {
+    height: 45px !important;
+  }
+  
+  .footer-logo {
+    height: 55px !important;
   }
 }
 
