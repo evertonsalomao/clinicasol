@@ -70,10 +70,9 @@ document.addEventListener('DOMContentLoaded', function() {
     galleryItems.forEach(item => {
         item.addEventListener('click', function() {
             const img = this.querySelector('.gallery-img');
-            const overlay = this.querySelector('.gallery-overlay h5');
             
-            if (img && overlay) {
-                openLightbox(img.src, overlay.textContent);
+            if (img) {
+                openLightbox(img.src, img.alt);
             }
         });
     });
