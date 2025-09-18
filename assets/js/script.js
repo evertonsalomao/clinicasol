@@ -11,17 +11,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Navbar scroll effect
     const navbar = document.querySelector('.navbar');
-    const navbarHeight = navbar.offsetHeight;
-
-    function updateNavbar() {
-        if (window.scrollY > navbarHeight) {
-            navbar.classList.add('navbar-scrolled');
-        } else {
-            navbar.classList.remove('navbar-scrolled');
-        }
-    }
-
-    window.addEventListener('scroll', updateNavbar);
+    const navbarHeight = navbar ? navbar.offsetHeight : 80;
 
     // Smooth scrolling for navigation links
     const navLinks = document.querySelectorAll('.navbar-nav .nav-link');
@@ -34,7 +24,7 @@ document.addEventListener('DOMContentLoaded', function() {
             const targetSection = document.querySelector(targetId);
             
             if (targetSection) {
-                const offsetTop = targetSection.offsetTop - navbarHeight;
+                const offsetTop = targetSection.offsetTop - 100;
                 
                 window.scrollTo({
                     top: offsetTop,
@@ -55,7 +45,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const sections = document.querySelectorAll('section[id]');
     
     function updateActiveNav() {
-        const scrollPos = window.scrollY + navbarHeight + 50;
+        const scrollPos = window.scrollY + 150;
         
         sections.forEach(section => {
             const sectionTop = section.offsetTop;
@@ -315,7 +305,6 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     function updateAnimations() {
-        updateNavbar();
         updateActiveNav();
         animateOnScroll();
         ticking = false;

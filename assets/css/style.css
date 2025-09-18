@@ -72,7 +72,7 @@ p {
 /* Navigation */
 .navbar {
   transition: all 0.3s ease;
-  padding: 1rem 0;
+  padding: 0.2rem 0;
 }
 
 .navbar-scrolled {
@@ -618,22 +618,22 @@ section {
 
 /* Logo size adjustments */
 .navbar-brand img {
-  height: 55px !important;
+  height: 90px !important;
   transition: all 0.3s ease;
 }
 
 .footer-logo {
-  height: 65px !important;
+  height: 90px !important;
   filter: brightness(0) invert(1);
 }
 
 @media (max-width: 768px) {
   .navbar-brand img {
-    height: 45px !important;
+    height: 70px !important;
   }
   
   .footer-logo {
-    height: 55px !important;
+    height: 70px !important;
   }
 }
 
