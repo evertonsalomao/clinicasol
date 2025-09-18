@@ -121,7 +121,7 @@ p {
 .hero-section {
   min-height: 100vh;
   background: linear-gradient(rgba(37, 133, 199, 0.8), rgba(30, 108, 160, 0.9)), 
-              url('https://images.pexels.com/photos/4386464/pexels-photo-4386464.jpeg') center/cover no-repeat;
+              url('../img/bg-hero.jpeg') center/cover no-repeat;
   display: flex;
   align-items: center;
   position: relative;
