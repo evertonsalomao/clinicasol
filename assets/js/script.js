@@ -361,6 +361,6 @@ window.ClinicaSol = {
     },
     openWhatsApp: function(message) {
         const encodedMessage = encodeURIComponent(message || 'Olá! Gostaria de saber mais sobre os serviços da Clínica Sol.');
-        window.open(`https://wa.me/5515333344444?text=${encodedMessage}`, '_blank');
+        window.open(`https://wa.me/5515996669097?text=${encodedMessage}`, '_blank');
     }
 };
