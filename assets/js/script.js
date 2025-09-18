@@ -85,7 +85,6 @@ document.addEventListener('DOMContentLoaded', function() {
             <div class="lightbox-content">
                 <button class="lightbox-close">&times;</button>
                 <img src="${imageSrc}" alt="${title}" class="lightbox-img">
-                <div class="lightbox-title">${title}</div>
             </div>
         `;
 
@@ -107,6 +106,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 justify-content: center;
                 z-index: 9999;
                 animation: fadeIn 0.3s ease;
+                cursor: pointer;
             }
             
             .lightbox-content {
@@ -122,13 +122,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 object-fit: contain;
                 border-radius: 10px;
                 box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
-            }
-            
-            .lightbox-title {
-                color: white;
-                font-size: 1.2rem;
-                font-weight: 600;
-                margin-top: 1rem;
+                cursor: default;
             }
             
             .lightbox-close {
@@ -156,6 +150,11 @@ document.addEventListener('DOMContentLoaded', function() {
                 from { opacity: 0; }
                 to { opacity: 1; }
             }
+            
+            @keyframes fadeOut {
+                from { opacity: 1; }
+                to { opacity: 0; }
+            }
         `;
         document.head.appendChild(style);
 
@@ -172,28 +171,24 @@ document.addEventListener('DOMContentLoaded', function() {
         function closeLightbox() {
             lightbox.style.animation = 'fadeOut 0.3s ease';
             setTimeout(() => {
-                document.body.removeChild(lightbox);
-                document.head.removeChild(style);
+                if (document.body.contains(lightbox)) {
+                    document.body.removeChild(lightbox);
+                }
+                if (document.head.contains(style)) {
+                    document.head.removeChild(style);
+                }
                 document.body.style.overflow = 'auto';
             }, 300);
         }
 
-        // Add fadeOut animation
-        const fadeOutStyle = document.createElement('style');
-        fadeOutStyle.textContent = `
-            @keyframes fadeOut {
-                from { opacity: 1; }
-                to { opacity: 0; }
-            }
-        `;
-        document.head.appendChild(fadeOutStyle);
-
         // Close on Escape key
-        document.addEventListener('keydown', function(e) {
+        const escapeHandler = function(e) {
             if (e.key === 'Escape') {
                 closeLightbox();
+                document.removeEventListener('keydown', escapeHandler);
             }
-        });
+        };
+        document.addEventListener('keydown', escapeHandler);
     }
 
     // Animate elements on scroll
