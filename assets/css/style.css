@@ -145,7 +145,7 @@ p {
 }
 
 .hero-title {
-  font-size: 3.5rem;
+  font-size: 3rem;
   font-family: 'Playfair Display', Georgia, serif;
   font-weight: 700;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
@@ -442,12 +442,13 @@ section {
 /* WhatsApp Float Button */
 .whatsapp-float {
   position: fixed;
-  width: 65px;
-  height: 65px;
+  width: auto;
+  height: auto;
+  padding: 15px 20px;
   bottom: 30px;
   right: 30px;
   background: #25d366;
-  border-radius: 15px;
+  border-radius: 50px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -455,17 +456,51 @@ section {
   z-index: 1000;
   animation: pulse 2s infinite;
   transition: all 0.3s ease;
+  text-decoration: none;
+  color: var(--white);
+  font-family: 'Playfair Display', Georgia, serif;
+  font-weight: 500;
+  font-size: 0.9rem;
+  white-space: nowrap;
 }
 
 .whatsapp-float:hover {
-  transform: scale(1.1);
+  transform: scale(1.05);
   box-shadow: 0 6px 25px rgba(37, 211, 102, 0.5);
+  color: var(--white);
+  text-decoration: none;
 }
 
-.whatsapp-float a {
-  color: var(--white);
-  font-size: 2rem;
+.whatsapp-float i {
+  font-size: 1.5rem;
+  margin-right: 8px;
+}
+
+/* WhatsApp Menu Pill */
+.whatsapp-pill {
+  background: #25d366;
+  color: var(--white) !important;
+  padding: 8px 15px;
+  border-radius: 25px;
+  font-size: 0.9rem;
+  font-weight: 500;
   text-decoration: none;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  margin-left: 1rem;
+}
+
+.whatsapp-pill:hover {
+  background: #1fb854;
+  color: var(--white) !important;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 15px rgba(37, 211, 102, 0.3);
+}
+
+.whatsapp-pill i {
+  margin-right: 5px;
+  font-size: 1rem;
 }
 
 /* Animations */
@@ -495,7 +530,7 @@ section {
 /* Responsive Design */
 @media (max-width: 768px) {
   .hero-title {
-    font-size: 2.2rem;
+    font-size: 2rem;
   }
   
   .hero-subtitle {
@@ -518,16 +553,23 @@ section {
   }
   
   .whatsapp-float {
-    width: 60px;
-    height: 60px;
+    padding: 12px 15px;
     bottom: 20px;
     right: 20px;
+    font-size: 0.8rem;
   }
   
-  .whatsapp-float a {
-    font-size: 1.8rem;
+  .whatsapp-float i {
+    font-size: 1.3rem;
+    margin-right: 6px;
   }
   
+  .whatsapp-pill {
+    margin-left: 0.5rem;
+    padding: 6px 12px;
+    font-size: 0.8rem;
+  }
+
   section {
     padding: 60px 0;
   }
@@ -535,7 +577,7 @@ section {
 
 @media (max-width: 576px) {
   .hero-title {
-    font-size: 1.8rem;
+    font-size: 1.6rem;
   }
   
   .hero-subtitle {
@@ -557,6 +599,20 @@ section {
   
   .gallery-img {
     height: 250px;
+  }
+
+  .whatsapp-float {
+    padding: 10px 12px;
+    font-size: 0.75rem;
+  }
+
+  .whatsapp-float i {
+    font-size: 1.2rem;
+    margin-right: 5px;
+  }
+
+  .whatsapp-pill {
+    display: none;
   }
 }
 
