@@ -325,7 +325,7 @@ document.addEventListener('DOMContentLoaded', function() {
         item.setAttribute('aria-label', 'Ver imagem em tamanho completo');
     });
 
-    console.log('Clínica Geriátrica Sol - Site carregado com sucesso!');
+    console.log('Clínica de Repouso Sol - Site carregado com sucesso!');
 });
 
 // Utility functions
@@ -355,12 +355,12 @@ function throttle(func, limit) {
 }
 
 // Export functions for potential use in other scripts
-window.ClinicaSol = {
+window.ClinicaRepouso = {
     init: function() {
-        console.log('Clínica Sol initialized');
+        console.log('Clínica de Repouso Sol initialized');
     },
     openWhatsApp: function(message) {
-        const encodedMessage = encodeURIComponent(message || 'Olá! Gostaria de saber mais sobre os serviços da Clínica Sol.');
+        const encodedMessage = encodeURIComponent(message || 'Olá! Gostaria de saber mais sobre os serviços da Clínica de Repouso Sol.');
         window.open(`https://wa.me/5515996669097?text=${encodedMessage}`, '_blank');
     }
 };
