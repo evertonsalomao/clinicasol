@@ -2,7 +2,7 @@ User-agent: *
 Allow: /
 
 # Sitemap
-Sitemap: https://clinicasol.com.br/sitemap.xml
+Sitemap: https://clinicaderepousosol.com.br/sitemap.xml
 
 # Specific rules for search engines
 User-agent: Googlebot
